@@ -1,0 +1,156 @@
+*{box-sizing: border-box;}
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI';
+    
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    
+}
+.container{
+    max-width: 1300px;
+    margin:0 auto;
+
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 0;
+}
+.korb>i{
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+/************nav****************/
+nav{
+    background-color: rgb(24, 22, 22);
+}
+.menu{
+    display: flex;
+    justify-content: flex-end;
+}
+nav ul li{
+    list-style-type: none;
+
+}
+nav a{
+    display:block;
+    padding:8px 20px;
+    color:cornsilk;
+    font-size: 1.5em;
+    
+}
+nav a:hover{
+    background-color: rgb(53, 51, 51);
+}
+/************main****************/
+.content{
+    display: flex;
+    padding-top:30px ;
+    text-align:center;
+}
+aside{
+    
+    width: 15%;
+}
+aside ul{margin:0;}
+aside ul li{
+    list-style-type: none;
+    margin:0;
+    
+    
+}
+aside a{
+    display: block;
+    font-size: 1.2em;
+    padding:10px 10px;
+    background-color: rgb(225, 232, 243);
+}
+aside h3{
+    margin:0;
+    height: 60px;
+    margin-bottom: 20px;
+}
+.product{
+    width: 63%;
+    margin:0 2%;
+    
+}
+.product h1{
+    margin:0;
+    height: 60px;
+    margin-bottom: 20px;
+}
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.products .card{
+    width:30%;
+    margin-bottom: 30px;
+    border:1px solid rgb(175, 175, 172);
+}
+.chart{
+    width: 20%;
+}
+
+.bild img{
+    height:10%;
+}
+.card .price{
+    display: flex;
+    justify-content: space-evenly;
+}
+/*********CHART**********/
+main .chart{
+    
+}
+.chart h3{
+height: 60px;
+margin:0;
+margin-bottom: 20px;
+}
+#sell ul{
+    margin:0;
+    padding:0;
+    
+}
+.chart #sell{
+    background-color: rgb(225, 232, 243);
+}
+#sell ul li{
+    list-style-type: none;
+    margin:0;
+    padding: 10px;
+    padding-top:10px;
+    text-align: center;
+    background-color: rgb(225, 232, 243);
+
+
+}
+.sum{
+    background-color: rgb(240, 236, 180);
+    font-size: 1.1em;
+    text-align: left;
+    padding:5px;
+    
+    
+    color:black;
+}
+#sumKosten{
+    color:red;
+    font-style: italic;
+    
+}
+.chart button{
+    width: 100%;
+    padding:5px;
+    margin-top: 10px;
+    margin-bottom:10px ;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/7ce396367e.js" crossorigin="anonymous">
+</script>
+<script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container left">
+            <div class="logo"> <img src="https://www.myresponsee.com/shop/img/logo.svg"></div>
+            <div class="korb"><i class="fas fa-shopping-cart"></i><span id="guthaben">1500</span></div>
+        </div>
+        <nav>
+            <ul class="container menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Catalog</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Contact</a></li>
+            </ul> 
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container content">
+        <aside>
+            <h3>Select Category</h3>
+            <ul><li><a href="">Herrenuhr</a></li>
+                <li><a href="">Dammenuhr</a></li>
+                <li><a href="">Kinderuhr</a></li>
+            </ul> 
+            
+            
+            </aside>
+        <div class="product">
+            <h1>Products</h1>
+            <div class="products">
+                <div class="card">
+                <span>Seiko 1</span>
+                <div class="bild"><img src="https://der-uhren-shop.de/media/image/c3/a0/21/xSWR052P1_200x200.jpg.pagespeed.ic.tAjuGR1KtJ.webp"></div>
+                <div class="price">
+                    <div><span>145,- €</span></div>
+                    <div>
+                        <button onclick="yaz('Seiko 1',145);">Add to Chart</button></div>
+
+                </div></div>
+            
+                <div class="card">
+                    <span>Seiko 2</span>
+                    <div class="bild"><img src="https://der-uhren-shop.de/media/image/5d/4d/52/xSRPD53K1_30200414184161_jpg-jpg_200x200.png.pagespeed.ic.2Pxxjblu9H.webp"></div>
+                    <div class="price">
+                        <div><span>165,- €</span></div>
+                        <div><button onclick="yaz('Seiko 2',165);">Add to Chart</button></div>
+    
+                    </div></div>
+            
+                <div class="card">
+                <span>Seiko 3</span>
+                <div class="bild"><img src="https://der-uhren-shop.de/media/image/d0/f2/e4/xSRPD59K1_30200428406693_jpg-jpg_200x200.png.pagespeed.ic.SXm0WSZeu2.webp"></div>
+                <div class="price">
+                    <div><span>245,- €</span></div>
+                    <div><button onclick="yaz('Seiko 3',245);">Add to Chart</button></div>
+        
+                </div>
+                </div>
+
+                <div class="card">
+                <span>Seiko 4</span>
+                <div class="bild"><img src="https://der-uhren-shop.de/media/image/cd/b2/ce/xSRPD55K2_30200419966530_jpg-jpg_200x200.png.pagespeed.ic.2Go2f5EpFG.webp"></div>
+                <div class="price">
+                    <div><span>125,- €</span></div>
+                    <div><button onclick="yaz('Seiko 4',125);">Add to Chart</button></div>
+            
+                </div></div>
+            
+                <div class="card">
+                <span>Seiko 5</span>
+                <div class="bild"><img src="https://der-uhren-shop.de/media/image/35/16/d0/SPB041_beauty_200x200.jpg"></div>
+                <div class="price">
+                    <div><span>245,- €</span></div>
+                    <div><button onclick="yaz('Seiko 5',245);">Add to Chart</button></div>
+                
+                </div></div>
+            
+                <div class="card">
+                <span>Seiko 6</span>
+                <div class="bild"><img src="https://der-uhren-shop.de/media/image/06/1a/85/2_296_lrg_200x200.jpg"></div>
+                <div class="price">
+                    <div><span>225,- €</span></div>
+                        <div><button onclick="yaz('Seiko 6',225);">Add to Chart</button></div>
+
+                </div></div>
+            
+            
+            
+            
+            
+            </div>
+
+
+
+            </div>
+
+
+
+
+        <div class="chart">
+            <h3>Shopping Chart</h3>
+            <div id="sell">
+               
+            </div>
+            <div class="sum"><span id="sumKosten"></span></div>
+            <button onclick="kaufen()">Kaufen</button>
+            <div id="meldung"></div>
+
+
+        </div>
+
+        </div>
+    </main>
+    <footer></footer>
+
+</body>
+</html>
