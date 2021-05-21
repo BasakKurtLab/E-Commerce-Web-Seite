@@ -5,6 +5,10 @@ body{
     font-family: 'Segoe UI';
     
 }
+:root{
+    --boxRadius: 10px;
+    --boxShadow: 0px 1px 14px 2px rgba(59, 59, 59, 0.81); 
+}
 
 a{
     text-decoration: none;
@@ -18,7 +22,7 @@ a{
 }
 .left{
     
-    padding:30px 0;
+    padding:25px 0;
 }
 .right{
     position: relative;
@@ -38,15 +42,19 @@ nav{
 }
 nav ul{
     padding:0;
+    margin: 0;
+    
 }
 nav ul li{
     list-style-type: none;
     margin: 0;
+    padding:0;
+    
 
 }
 nav a{
     display:block;
-    padding:8px 20px;
+    padding:15px 30px;
     color:cornsilk;
     font-size: 1.5em;
     
@@ -57,9 +65,33 @@ nav a:hover{
 .right i{
 color:white;
 cursor: pointer;
+transition: color 0.8s;
+margin: 0;
+}
+.right i:hover{
+    color: rgb(212, 207, 207);
 }
 .right span{
     color:white;
+}
+#guthaben{
+    margin-left: 10px;
+    
+}
+#kreis{
+    width:25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(61, 61, 59);
+    margin-left: 10px;
+    text-align: center;
+    display: none;
+    
+}
+.korb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 /************main****************/
 .content{
@@ -74,11 +106,14 @@ aside{
 aside ul{margin:0;padding:0;}
 aside ul li{
     list-style-type: none;
-    margin:0;
+    margin-bottom:5px;
     text-align: left;
-    
+    border: 1px solid rgb(204, 204, 199);
+    transition: box-shadow 0.5s;
+    border-radius: var(--boxRadius);
     
 }
+
 aside i{
     margin-right: 8px;
 }
@@ -87,6 +122,9 @@ aside a{
     font-size: 1.2em;
     padding:10px 10px;
     background-color: #d1e098;
+}
+aside a:hover{
+    background-color:#aebd78 ;
 }
 aside h3{
     text-align: left;
@@ -107,15 +145,19 @@ aside h3{
 .products{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .products .card{
     width:23%;
     margin-bottom: 30px;
-    border:1px solid rgb(175, 175, 172);
-    border-radius: 10px;
-    box-shadow: 0px 1px 14px 4px rgba(59, 59, 59, 0.81); 
+    border:1px solid rgb(204, 204, 199);
+    border-radius: var(--boxRadius);
+    transition: box-shadow 0.5s;
 
+}
+.products .card:hover
+{
+    box-shadow: var(--boxShadow);
 }
 .card>span{
     display: block;
@@ -124,14 +166,15 @@ aside h3{
     color: rgb(48, 46, 46);
     text-align: center;
     padding: 10px 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgb(204, 204, 199);
     
 }
 
 .bild{
     padding:10px;
-    height: 120px;
-    border-top: 1px solid rgb(134, 132, 132);
+    padding-top: 20px;
+    height: 140px;
+    
 }
 .bild img{
     height:100%;
@@ -161,15 +204,17 @@ aside h3{
     background-color:white;
     top:58px;
     right:0;
-    border-radius: 10px;
-    box-shadow: 0px 1px 14px 4px rgba(59, 59, 59, 0.81); 
+    border-radius: var(--boxRadius);
+    box-shadow: var(--boxShadow);
 }
 #chart h3{
 text-align: center;
-height: 60px;
+height: 40px;
 margin:0;
 margin-bottom: 10px;
 margin-top: 10px;
+border-bottom: 1px solid rgb(204, 204, 199);
+
 }
 #sell ul{
     margin:0;
@@ -204,14 +249,19 @@ margin-top: 10px;
     padding:10px;
     color:black;
     font-weight: bold;
-    margin-top: 10px;
+    
     margin-bottom:10px ;
     outline:none;
     border:none;
     background-color: #d1e098;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: var(--boxRadius);
+  
 }
 #chart button:hover, .price button:hover{
     background-color:#aebd78 ;
+}
+.price button{
+    margin-top: 0;
+    margin-bottom: 0;
 }
