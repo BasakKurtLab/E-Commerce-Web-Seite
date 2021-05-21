@@ -17,10 +17,11 @@ a{
 
 }
 .left{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:20px 0;
+    
+    padding:30px 0;
+}
+.right{
+    position: relative;
 }
 .korb>i{
     font-size: 1.5em;
@@ -32,10 +33,15 @@ nav{
 }
 .menu{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    padding:0;
 }
 nav ul li{
     list-style-type: none;
+    margin: 0;
 
 }
 nav a{
@@ -48,6 +54,13 @@ nav a{
 nav a:hover{
     background-color: rgb(53, 51, 51);
 }
+.right i{
+color:white;
+cursor: pointer;
+}
+.right span{
+    color:white;
+}
 /************main****************/
 .content{
     display: flex;
@@ -58,26 +71,31 @@ aside{
     
     width: 15%;
 }
-aside ul{margin:0;}
+aside ul{margin:0;padding:0;}
 aside ul li{
     list-style-type: none;
     margin:0;
+    text-align: left;
     
     
+}
+aside i{
+    margin-right: 8px;
 }
 aside a{
     display: block;
     font-size: 1.2em;
     padding:10px 10px;
-    background-color: rgb(225, 232, 243);
+    background-color: #d1e098;
 }
 aside h3{
+    text-align: left;
     margin:0;
     height: 60px;
     margin-bottom: 20px;
 }
 .product{
-    width: 63%;
+    width: 65%;
     margin:0 2%;
     
 }
@@ -92,50 +110,83 @@ aside h3{
     justify-content: space-between;
 }
 .products .card{
-    width:30%;
+    width:23%;
     margin-bottom: 30px;
     border:1px solid rgb(175, 175, 172);
-}
-.chart{
-    width: 20%;
-}
+    border-radius: 10px;
+    box-shadow: 0px 1px 14px 4px rgba(59, 59, 59, 0.81); 
 
-.bild img{
-    height:10%;
 }
-.card .price{
-    display: flex;
-    justify-content: space-evenly;
-}
-/*********CHART**********/
-main .chart{
+.card>span{
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(48, 46, 46);
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
     
 }
-.chart h3{
+
+.bild{
+    padding:10px;
+    height: 120px;
+    border-top: 1px solid rgb(134, 132, 132);
+}
+.bild img{
+    height:100%;
+    
+}
+.card .price{
+    padding:10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.price span{
+    font-size: 1em;
+    font-weight: bold;
+    color: rgb(48, 46, 46);
+    
+}
+
+/*********CHART**********/
+#chart{display:none;
+    width:210px;
+    height:auto;
+    position: absolute;
+    padding: 15px;
+    background-color:white;
+    top:58px;
+    right:0;
+    border-radius: 10px;
+    box-shadow: 0px 1px 14px 4px rgba(59, 59, 59, 0.81); 
+}
+#chart h3{
+text-align: center;
 height: 60px;
 margin:0;
-margin-bottom: 20px;
+margin-bottom: 10px;
+margin-top: 10px;
 }
 #sell ul{
     margin:0;
     padding:0;
     
 }
-.chart #sell{
-    background-color: rgb(225, 232, 243);
-}
+
 #sell ul li{
     list-style-type: none;
     margin:0;
     padding: 10px;
     padding-top:10px;
-    text-align: center;
-    background-color: rgb(225, 232, 243);
-
+    text-align: left;
 
 }
 .sum{
-    background-color: rgb(240, 236, 180);
+
     font-size: 1.1em;
     text-align: left;
     padding:5px;
@@ -148,9 +199,19 @@ margin-bottom: 20px;
     font-style: italic;
     
 }
-.chart button{
+#chart button, .price button{
     width: 100%;
-    padding:5px;
+    padding:10px;
+    color:black;
+    font-weight: bold;
     margin-top: 10px;
     margin-bottom:10px ;
+    outline:none;
+    border:none;
+    background-color: #d1e098;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#chart button:hover, .price button:hover{
+    background-color:#aebd78 ;
 }

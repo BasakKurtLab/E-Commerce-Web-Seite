@@ -5,21 +5,41 @@
 <link rel="stylesheet" href="style.css">
 <script src="https://kit.fontawesome.com/7ce396367e.js" crossorigin="anonymous">
 </script>
-<script src="script.js"></script>
+
 </head>
 <body>
     <header>
         <div class="container left">
             <div class="logo"> <img src="https://www.myresponsee.com/shop/img/logo.svg"></div>
-            <div class="korb"><i class="fas fa-shopping-cart"></i><span id="guthaben">1500</span></div>
+            
+            
+          
+             </div>
         </div>
         <nav>
-            <ul class="container menu">
-            <li><a href="">Home</a></li>
-            <li><a href="">Catalog</a></li>
-            <li><a href="">Product</a></li>
-            <li><a href="">Contact</a></li>
-            </ul> 
+            <div class="container menu">
+                <div><ul class="menu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Catalog</a></li>
+                    <li><a href="">Product</a></li>
+                    <li><a href="">Contact</a></li>
+                    </ul> 
+                </div>
+                <div class="right"> 
+                    <div class="korb">
+                        <i class="fas fa-shopping-cart" onclick="shoppingChart();"></i><span id="item"></span><span id="guthaben">Guthaben:1500</span>
+                    </div>
+                    <div id="chart">
+                        <h3>Shopping Chart</h3>
+                        <div id="sell">
+                           
+                        </div>
+                        <div class="sum"><span id="sumKosten"></span></div>
+                        <button onclick="kaufen()">Kaufen</button>
+                        <div id="meldung"></div>
+                     </div>
+                </div>
+            </div>
         </nav>
     </header>
     
@@ -27,9 +47,9 @@
         <div class="container content">
         <aside>
             <h3>Select Category</h3>
-            <ul><li><a href="">Herrenuhr</a></li>
-                <li><a href="">Dammenuhr</a></li>
-                <li><a href="">Kinderuhr</a></li>
+            <ul><li><a href=""><i class="fas fa-male"></i>Herrenuhr</a></li>
+                <li><a href=""><i class="fas fa-female"></i>Dammenuhr</a></li>
+                <li><a href=""><i class="fas fa-child"></i>Kinderuhr</a></li>
             </ul> 
             
             
@@ -92,35 +112,45 @@
                         <div><button onclick="yaz('Seiko 6',225);">Add to Chart</button></div>
 
                 </div></div>
+
+                
+                <div class="card">
+                <span>Seiko 7</span>
+                <div class="bild"><img src="https://der-uhren-shop.de/media/image/35/16/d0/SPB041_beauty_200x200.jpg"></div>
+                <div class="price">
+                    <div><span>245,- €</span></div>
+                    <div><button onclick="yaz('Seiko 7',245);">Add to Chart</button></div>
+                
+                </div></div>
             
-            
-            
-            
-            
+                <div class="card">
+                <span>Seiko 8</span>
+                <div class="bild"><img src="https://der-uhren-shop.de/media/image/06/1a/85/2_296_lrg_200x200.jpg"></div>
+                <div class="price">
+                    <div><span>225,- €</span></div>
+                        <div><button onclick="yaz('Seiko 8',225);">Add to Chart</button></div>
+
+                </div></div>
+
+
+                
+
+
+
+
+
+                
+            </div>
             </div>
 
 
 
-            </div>
 
-
-
-
-        <div class="chart">
-            <h3>Shopping Chart</h3>
-            <div id="sell">
-               
-            </div>
-            <div class="sum"><span id="sumKosten"></span></div>
-            <button onclick="kaufen()">Kaufen</button>
-            <div id="meldung"></div>
-
-
-        </div>
+        
 
         </div>
     </main>
     <footer></footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

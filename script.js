@@ -13,7 +13,10 @@ var nacher=vorher+text;
 warenkorb.innerHTML=nacher;
 
 kosten.innerHTML="Gesamtkosten=" +sum+ "-€";
+document.getElementById("item").innerHTML="("+ sayi +") ";
+chartShow();
 sayi++;
+
 }
 
 function kaufen(){
@@ -30,6 +33,7 @@ function kaufen(){
 
     sayi = 1;
     document.getElementById("sell").innerHTML = "";
+    document.getElementById("item").innerHTML= "";
 
     }
     else
@@ -38,4 +42,25 @@ function kaufen(){
     meldung.style.backgroundColor = "red";
 
     }
+}
+var sc=document.getElementById("chart");
+function shoppingChart(){
+if(getComputedStyle(sc,"").display=="none")
+
+{
+chartShow();
+
+}
+else{
+    
+chartClose();
+}
+
+}
+
+function chartShow(){
+    sc.style.display="block";
+}
+function chartClose(){
+    sc.style.display="none";
 }
