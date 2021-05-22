@@ -108,9 +108,9 @@ aside ul li{
     list-style-type: none;
     margin-bottom:5px;
     text-align: left;
-    border: 1px solid rgb(204, 204, 199);
+    border:none;
     transition: box-shadow 0.5s;
-    border-radius: var(--boxRadius);
+    
     
 }
 
@@ -122,6 +122,8 @@ aside a{
     font-size: 1.2em;
     padding:10px 10px;
     background-color: #d1e098;
+    border-radius: var(--boxRadius);
+    border: 1px solid rgb(204, 204, 199);
 }
 aside a:hover{
     background-color:#aebd78 ;
