@@ -267,3 +267,10 @@ border-bottom: 1px solid rgb(204, 204, 199);
     margin-top: 0;
     margin-bottom: 0;
 }
+#meldung{
+    padding:3px 2px;
+    color:#0e0d0d;
+    text-align: center;
+    opacity: 90%;
+    border-radius: 5px;
+}

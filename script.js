@@ -1,6 +1,14 @@
 var sayi=1;
 var sum=0;
 var guthaben=1500;
+var myCounter;
+var time = 0;
+
+
+
+
+
+
 
 function yaz(name,price)
 {
@@ -20,11 +28,39 @@ sayi++;
 
 }
 
+
+function meldenKaufen()
+
+{   
+    time = 3;
+    
+    var meldung = document.getElementById("meldung");
+    meldung.innerHTML = "Sie haben gekauft!";
+    meldung.style.backgroundColor = "#2a8717";
+    meldung.style.display = "block";
+    myCounter = setInterval(timeLoser, 1000);
+
+}
+
+function meldenNicht()
+
+{   time = 3;
+    
+    var meldung = document.getElementById("meldung");
+    meldung.innerHTML = "Sie haben nicht genügend Geld!";
+    meldung.style.backgroundColor = "#e64343";
+    meldung.style.display = "block";
+
+    myCounter = setInterval(timeLoser, 1000);
+}
+
+
 function kaufen(){
     if(sum<=guthaben)
-    {var meldung = document.getElementById("meldung");
-    meldung.innerHTML = "Sie haben gekauft!";
-    meldung.style.backgroundColor = "green";
+    {   
+        
+        meldenKaufen();
+
 
     guthaben -= sum;
     document.getElementById("guthaben").innerHTML = "Guthaben: <b>" + guthaben + " €</b>";
@@ -40,10 +76,8 @@ function kaufen(){
 
     }
     else
-    {var meldung = document.getElementById("meldung");
-    meldung.innerHTML = "Sie haben nicht genügend Geld!";
-    meldung.style.backgroundColor = "red";
-
+    {
+        meldenNicht()
     }
 }
 var sc=document.getElementById("chart");
@@ -75,4 +109,15 @@ function kreisShow(){
 }
 function kreisClose(){
     kr.style.display="none";
+}
+
+function timeLoser()
+{
+    time--;
+    if(time == 0)
+    {
+        clearInterval(myCounter);
+        meldung.style.display = "none";
+
+    }
 }
