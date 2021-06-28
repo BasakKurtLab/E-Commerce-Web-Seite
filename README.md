@@ -1,2 +1,2 @@
 # E-Commerce-Web-Seite
-https://basakkurtlab.githubio./e-commerce-web-seiete/
+https://basakkurtlab.github.io./e-commerce-web-seiete/
